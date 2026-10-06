@@ -3,12 +3,12 @@ import React from 'react';
 const testimonials = [
   {
     name: "John Kalisa",
-    company: "Rwanda Exports Ltd",
+    company: "",
     quote: "Adonai Ltd made our customs clearance process completely stress-free. Highly recommended for any logistics needs."
   },
   {
     name: "Sarah Mutoni",
-    company: "Global Trade Hub",
+    company: "",
     quote: "Professional, timely, and very reliable. They are our go-to partner in Kigali for freight forwarding."
   }
 ];
