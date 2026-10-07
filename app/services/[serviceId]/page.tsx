@@ -3,11 +3,33 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { SERVICES_DATA } from '@/data/services';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { absoluteUrl, safeJsonLd, siteConfig } from '@/lib/seo';
 
 interface Props {
   params: Promise<{
     serviceId: string;
   }>;
+}
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return Object.keys(SERVICES_DATA).map((serviceId) => ({ serviceId }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { serviceId } = await params;
+  const service = SERVICES_DATA[serviceId as keyof typeof SERVICES_DATA];
+  if (!service) notFound();
+  const title = service.title.trim();
+  return {
+    title,
+    description: service.description,
+    alternates: { canonical: `/services/${serviceId}` },
+    openGraph: { title, description: service.description, url: `/services/${serviceId}`, images: [{ url: service.image, alt: title }] },
+  };
 }
 
 // 1. Notice the 'async' keyword added here
@@ -19,18 +41,22 @@ export default async function ServiceDetailPage({ params }: Props) {
   const service = SERVICES_DATA[serviceId as keyof typeof SERVICES_DATA];
 
   if (!service) {
-    return (
-      <div className="min-h-[70vh] flex flex-col items-center justify-center p-6 text-center">
-        <h2 className="text-2xl font-bold text-slate-800 mb-4">Service Not Found</h2>
-        <Link href="/" className="text-emerald-600 font-semibold flex items-center gap-2">
-          <ArrowLeft size={16}/> Back to Home
-        </Link>
-      </div>
-    );
+    notFound();
   }
+
+  const serviceTitle = service.title.trim();
 
   return (
     <div className="bg-slate-50 min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: serviceTitle,
+        description: service.description,
+        url: absoluteUrl(`/services/${serviceId}`),
+        provider: { "@type": "Organization", "@id": `${siteConfig.url}/#organization`, name: siteConfig.name },
+        areaServed: ["Rwanda", "East Africa"],
+      }) }} />
       <div className="max-w-4xl mx-auto px-6 py-16">
         <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-emerald-600 mb-8 transition-colors">
           <ArrowLeft size={16} /> Back to Overview
@@ -44,7 +70,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               <div className="w-14 h-14 bg-emerald-600 rounded-2xl flex items-center justify-center text-white shadow-md">
                 {service.icon}
               </div>
-              <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">{service.title}</h1>
+              <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">{serviceTitle}</h1>
             </div>
           </div>
 

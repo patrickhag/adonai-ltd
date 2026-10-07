@@ -1,6 +1,12 @@
-"use client";
 import React from 'react';
 import { FileText, Package, Receipt, CheckCircle, Truck, ShieldCheck, MapPin } from 'lucide-react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'How Our Shipping Process Works',
+  description: 'See how Adonai Ltd manages quotations, pickup, customs clearance, and delivery for local and international shipments.',
+  alternates: { canonical: '/process' },
+};
 
 const steps = [
   { 
@@ -53,8 +59,8 @@ export default function ProcessPage() {
       {/* Hero Header Section from head.jpg */}
       <section className="relative w-full h-[300px] flex items-center bg-slate-900 overflow-hidden">
         <img 
-          src="assets/PLANE.png" 
-          alt="Our Process" 
+          src="/assets/PLANE.png"
+          alt="Cargo aircraft representing the Adonai Ltd shipping process"
           className="absolute inset-0 w-full h-full object-cover opacity-60"
         />
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-white">

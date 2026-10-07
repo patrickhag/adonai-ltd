@@ -1,11 +1,18 @@
 import React from 'react';
 import { TEAM_DEPARTMENTS } from '@/data/Team'; 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Team and Departments',
+  description: 'Meet the Adonai Ltd departments supporting logistics operations, freight forwarding, and customs clearance in Rwanda.',
+  alternates: { canonical: '/teamdepartment' },
+};
 
 export default function TeamGrid() {
   return (
     <section className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-slate-900 mb-16 text-center">Our Departments</h2>
+        <h1 className="text-4xl font-bold text-slate-900 mb-16 text-center">Our Departments</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {TEAM_DEPARTMENTS.map((dept) => (

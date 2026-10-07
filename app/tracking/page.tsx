@@ -1,4 +1,13 @@
 // app/[locale]/tracking/page.tsx
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Track Your Shipment',
+  description: 'Track an Adonai Ltd shipment using your tracking number.',
+  alternates: { canonical: '/tracking' },
+  robots: { index: false, follow: true },
+};
+
 export default function TrackingPage() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-20 min-h-[60vh]">

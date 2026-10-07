@@ -1,5 +1,12 @@
 import React from 'react';
 import Header from '@/components/about';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about Adonai Ltd, a Kigali-based logistics and customs clearance company serving Rwanda and East Africa.',
+  alternates: { canonical: '/about' },
+};
 
 export default function AboutPage() {
   return (

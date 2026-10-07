@@ -4,67 +4,67 @@ import { Ship, FileText, Clock, Truck, Warehouse, Briefcase, HelpCircle, Globe, 
 
 export const SERVICES_DATA = {
   "freight-forwarding": {
-    title: " Freight Forwarding",
+    title: "Freight Forwarding",
     icon: <Ship size={40} />,
     image: "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=800&q=80",
     summary: "Air Freight, Sea Freight (FCL & LCL), Road Freight & Multimodal Transport",
     description: "Our comprehensive freight forwarding solutions bridge continental gaps to seamlessly transport your goods across major international trade networks."
   },
   "customs-clearance": {
-    title: " Customs Clearance",
+    title: "Customs Clearance",
     icon: <FileText size={40} />,
     image: "/assets/clearance.PNG", // Pointing directly to public/assets/
     summary: "Import & Export Customs Clearance, Transit Cargo Clearance, Complete Docs & Compliance",
-    description: "Navigating local customs structures requires local expertise and meticulous accuracy..."
+    description: "We manage import, export, and transit customs clearance with accurate documentation, regulatory guidance, and local expertise to help cargo move through Rwanda efficiently."
   },
   "door-to-door": {
-    title: " Door-to-Door Delivery",
+    title: "Door-to-Door Delivery",
     icon: <Clock size={40} />,
     image: "/assets/door-to-door.PNG",
     summary: "Direct Collection, Last-Mile Distribution, Swift Express Delivery",
-    description: "From the moment cargo leaves your overseas supplier's assembly line or warehouse..."
+    description: "We coordinate collection from your supplier, international transport, customs formalities, and last-mile delivery to provide one accountable door-to-door logistics service."
   },
   "cargo-handling": {
-    title: " Cargo Handling & Transport",
+    title: "Cargo Handling & Transport",
     icon: <Truck size={40} />,
     image: "/assets/cargo.PNG",
     summary: "Consolidation & Deconsolidation, Reliable Infrastructure, Complex Project Cargo",
-    description: "We provide high-integrity ground management for heavy-duty, delicate, or mixed freight..."
+    description: "We coordinate secure handling and road transport for general, delicate, oversized, and project cargo, with careful planning from loading through final delivery."
   },
   "warehousing": {
-    title: " Warehousing & Distribution",
+    title: "Warehousing & Distribution",
     icon: <Warehouse size={40} />,
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
     summary: "Secure Storage, Advanced Inventory Layouts, Optimized Distribution",
-    description: "Keep your supply streams moving efficiently with our clean, secure, and strategically situated warehousing options..."
+    description: "Our warehousing and distribution solutions support secure storage, inventory coordination, order preparation, and timely dispatch across Rwanda and the region."
   },
   "procurement": {
-    title: " Procurement & Sourcing",
+    title: "Procurement & Sourcing",
     icon: <Briefcase size={40} />,
     image: "/assets/procurement.PNG",
     summary: "Product Sourcing, Purchase Orders Management, Quality Inspection Coordination",
-    description: "Simplify complex cross-border procurement workflows..."
+    description: "We simplify cross-border procurement through supplier coordination, purchase order support, sourcing assistance, quality inspection coordination, and shipment planning."
   },
   "trade-consultancy": {
-    title: " Trade Consultancy",
+    title: "Trade Consultancy",
     icon: <HelpCircle size={40} />,
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     summary: "Expert Advisory, Shipping Documentation Support, Customs Guidance",
-    description: "Avoid expensive log jams and compliance regulatory slip-ups through expert pre-shipment advisory..."
+    description: "Our trade consultants help importers and exporters prepare shipping documents, understand customs requirements, and reduce preventable compliance delays before cargo moves."
   },
   "cross-border-logistics": {
-    title: " Cross-Border Logistics",
+    title: "Cross-Border Logistics",
     icon: <Globe size={40} />,
     image: "/assets/crossing.PNG",
     summary: "East African Regional Transport Routes, Cross-Border Cargo, Transit Docs",
-    description: "Specialized overland tracking designed around East African regional commercial infrastructure..."
+    description: "We plan and coordinate regional road freight, border documentation, transit cargo, and delivery across key East African trade corridors."
   },
   "compliance-special-ops": {
-    title: " Compliance & Special Ops",
+    title: "Compliance & Special Operations",
     icon: <ShieldCheck size={40} />,
     image: "/assets/comp.PNG",
     summary: "Accurate EBM Support, Import Permit Assistance, Commercial & Project Logistics",
-    description: "Tailor-made assistance protecting critical commercial shipments from unexpected delays..."
+    description: "We provide tailored compliance support for permits, EBM documentation, commercial shipments, and complex project logistics that require detailed operational oversight."
   }
 };
 
@@ -102,7 +102,7 @@ export const PARTNERS_CLIENTS = [
     id: "bsc",
     name: "BSC",
     image: "/assets/CLIENTS/logo_588999810.jpg",
-    description: "Adonai Ltd provides specialized customs brokerage and freight forwarding for AOS, ensuring seamless supply chain integration.",
+    description: "Adonai Ltd provides customs brokerage and freight forwarding support for BSC, helping keep its supply chain efficient and compliant.",
     solutions: ["Priority Customs Clearance", "Dedicated Freight Lanes"],
     // ...
   },
@@ -110,15 +110,15 @@ export const PARTNERS_CLIENTS = [
     id: "aos",
     name: "AOS",
     image: "/assets/CLIENTS/images (1).png",
-    description: "Adonai Ltd provides specialized customs brokerage and freight forwarding for Jibu Gas One, ensuring seamless supply chain integration.",
+    description: "Adonai Ltd provides customs brokerage and freight forwarding support for AOS, helping keep its supply chain efficient and compliant.",
     solutions: ["Priority Customs Clearance", "Dedicated Freight Lanes"],
     // ...
   },
   {
     id: "jibu",
-    name: "jibu",
+    name: "Jibu",
     image: "/assets/CLIENTS/images (2).png",
-    description: "Adonai Ltd provides specialized customs brokerage and freight forwarding for Agri Gear, ensuring seamless supply chain integration.",
+    description: "Adonai Ltd provides customs brokerage and freight forwarding support for Jibu, helping keep its supply chain efficient and compliant.",
     solutions: ["Priority Customs Clearance", "Dedicated Freight Lanes"],
     // ...
   },
@@ -126,7 +126,7 @@ export const PARTNERS_CLIENTS = [
     id: "glm",
     name: "GLM",
     image: "/assets/CLIENTS/images (4).jfif",
-    description: "Adonai Ltd provides specialized customs brokerage and freight forwarding for Rubis, ensuring seamless supply chain integration.",
+    description: "Adonai Ltd provides customs brokerage and freight forwarding support for GLM, helping keep its supply chain efficient and compliant.",
     solutions: ["Priority Customs Clearance", "Dedicated Freight Lanes"],
     // ...
   },
@@ -134,15 +134,15 @@ export const PARTNERS_CLIENTS = [
     id: "rubis",
     name: "Rubis",
     image: "/assets/CLIENTS/images (5).jfif",
-    description: "Adonai Ltd provides specialized customs brokerage and freight forwarding for Oryx Energies, ensuring seamless supply chain integration.",
+    description: "Adonai Ltd provides customs brokerage and freight forwarding support for Rubis, helping keep its supply chain efficient and compliant.",
     solutions: ["Priority Customs Clearance", "Dedicated Freight Lanes"],
     // ...
   },
   {
-    id: "orxy",
-    name: "orxy",
+    id: "oryx",
+    name: "Oryx Energies",
     image: "/assets/CLIENTS/images.jfif",
-    description: "Adonai Ltd provides specialized customs brokerage and freight forwarding for Broadband Systems Corporation, ensuring seamless supply chain integration.",
+    description: "Adonai Ltd provides customs brokerage and freight forwarding support for Oryx Energies, helping keep its supply chain efficient and compliant.",
     solutions: ["Priority Customs Clearance", "Dedicated Freight Lanes"],
     // ...
   },

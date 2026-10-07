@@ -23,7 +23,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-slate-400 flex flex-col items-start">
             <li><Link href="/#services" className="hover:text-white text-sm text-slate-400 text-left">Services</Link></li>
             <li><Link href="/#why-us" className="hover:text-white text-sm text-slate-400 text-left">Why Choose Us</Link></li>
-            <li><Link href="/#about" className="hover:text-white text-sm text-slate-400 text-left">About Corporate</Link></li>
+            <li><Link href="/about" className="hover:text-white text-sm text-slate-400 text-left">About Corporate</Link></li>
           </ul>
         </div>
         <div>

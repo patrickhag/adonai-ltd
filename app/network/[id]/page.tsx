@@ -1,14 +1,34 @@
-"use client";
-import { useParams } from 'next/navigation';
 import { PARTNERS_CLIENTS } from '@/data/services';
 import { ArrowLeft, CheckCircle, ShieldCheck, MapPin, Quote } from 'lucide-react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
-export default function ClientDetailPage() {
-  const { id } = useParams();
+interface Props { params: Promise<{ id: string }> }
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return PARTNERS_CLIENTS.map(({ id }) => ({ id }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const client = PARTNERS_CLIENTS.find((item) => item.id === id);
+  if (!client) notFound();
+  return {
+    title: `${client.name} Logistics Partnership`,
+    description: client.description,
+    alternates: { canonical: `/network/${id}` },
+    openGraph: { title: `${client.name} Logistics Partnership`, description: client.description, url: `/network/${id}`, images: [{ url: client.image, alt: `${client.name} logo` }] },
+  };
+}
+
+export default async function ClientDetailPage({ params }: Props) {
+  const { id } = await params;
   const client = PARTNERS_CLIENTS.find((c) => c.id === id);
 
-  if (!client) return <div className="p-20 text-center text-stone-600">Client Profile Not Found.</div>;
+  if (!client) notFound();
 
   return (
     <main className="min-h-screen bg-stone-50 pt-20 pb-20">
