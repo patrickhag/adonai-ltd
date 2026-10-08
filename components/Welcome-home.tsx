@@ -17,6 +17,7 @@ export default function WelcomeHome({ onViewChange }: WelcomeHomeProps) {
     { name: "Mikumi Freight Forwarders", src: "/assets/PARTERNS/images.png" },
     { name: "DP World", src: "/assets/PARTERNS/logo_1576363480.png" },
     { name: "Magerwa", src: "/assets/PARTERNS/magerwa_logo.png" },
+    { name: "GSLN", src: "/assets/PARTERNS/GSLN.png" },
   ];
 
   // We duplicate the array to ensure an infinite, unbroken visual loop
